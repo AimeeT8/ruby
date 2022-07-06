@@ -42,13 +42,13 @@ end
 
 
 
-account_sid = "ACa45ea0a9d23b7b3e0eba3bb1932e3c38"
-auth_token = "5c501f14fac834e02b9b7b11ccd1f541"
+account_sid = "Get account_sid from Twilio"
+auth_token = "Get auth_token from Twilio"
 
 @client = Twilio::REST::Client.new(account_sid, auth_token)
 
 message = @client.api.account.messages.create(
-    :from => "+19388008914", 
+    :from => "00000000000", 
     :to => "00000000000", 
     :body => "The answer to your question #{question}: #{answer}"
     )
